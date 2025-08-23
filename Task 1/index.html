@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development Basics - 9 Days Learning Journey</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- HTML Structure Learning Section -->
+    <header class="hero-section">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="badge-icon">🎨</span>
+          <span>UI/UX Enhanced Learning</span>
+        </div>
+        <h1 class="hero-title">Web Development Basics</h1>
+        <p class="hero-subtitle">Your 9-Day Learning Journey with Modern UI/UX Design</p>
+        <div class="hero-features">
+          <div class="feature-pill">
+            <span class="pill-icon">📱</span>
+            <span>Responsive Design</span>
+          </div>
+          <div class="feature-pill">
+            <span class="pill-icon">⚡</span>
+            <span>Interactive Elements</span>
+          </div>
+          <div class="feature-pill">
+            <span class="pill-icon">🎯</span>
+            <span>User-Centered</span>
+          </div>
+        </div>
+        <button id="welcomeBtn" class="cta-button">Start Learning!</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        
+        <!-- Day 1-3: HTML Fundamentals -->
+        <section class="learning-section">
+          <div class="section-header">
+            <div class="section-icon">📝</div>
+            <h2 class="section-title">Days 1-3: HTML Fundamentals</h2>
+            <p class="section-description">Master the building blocks of web structure</p>
+          </div>
+          <div class="content-grid">
+            <div class="content-card">
+              <div class="card-header">
+                <div class="card-icon html-icon">HTML</div>
+                <div class="difficulty-badge beginner">Beginner</div>
+              </div>
+              <h3>HTML Elements You'll Learn</h3>
+              <ul class="feature-list">
+                <li>Headings (h1, h2, h3, etc.)</li>
+                <li>Paragraphs and text formatting</li>
+                <li>Links and navigation</li>
+                <li>Images and media</li>
+                <li>Lists and structure</li>
+              </ul>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="learn-link">
+                Learn More About HTML →
+              </a>
+            </div>
+            
+            <div class="content-card">
+              <div class="card-header">
+                <div class="card-icon practice-icon">💻</div>
+              </div>
+              <h3>Practice Example</h3>
+              <p>This webpage demonstrates proper HTML structure with semantic elements like header, main, section, and footer.</p>
+              <img src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                   alt="Code on computer screen" class="example-image">
+              <button id="htmlBtn" class="action-button">Explore HTML Structure</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Day 4-6: CSS Styling -->
+        <section class="learning-section">
+          <div class="section-header">
+            <div class="section-icon">🎨</div>
+            <h2 class="section-title">Days 4-6: CSS Styling & UI/UX</h2>
+            <p class="section-description">Create beautiful, user-friendly interfaces</p>
+          </div>
+          <div class="content-grid">
+            <div class="content-card">
+              <div class="card-header">
+                <div class="card-icon css-icon">CSS</div>
+                <div class="difficulty-badge intermediate">Intermediate</div>
+              </div>
+              <h3>CSS & UI/UX Concepts</h3>
+              <div class="css-demo">
+                <div class="color-box color-primary">Colors</div>
+                <div class="color-box color-secondary">Fonts</div>
+                <div class="color-box color-accent">Layout</div>
+                <div class="color-box color-warning">UX</div>
+              </div>
+              <p>Learn styling, user experience principles, accessibility, and responsive design patterns.</p>
+              <button id="cssBtn" class="action-button">See CSS Magic</button>
+            </div>
+            
+            <div class="content-card">
+              <div class="card-header">
+                <div class="card-icon design-icon">🎯</div>
+              </div>
+              <h3>UI/UX Design Principles</h3>
+              <ul class="feature-list">
+                <li>Color theory and accessibility</li>
+                <li>Typography and visual hierarchy</li>
+                <li>Spacing and layout systems</li>
+                <li>Responsive and mobile-first design</li>
+                <li>Micro-interactions and animations</li>
+                <li>User feedback and loading states</li>
+              </ul>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="learn-link">
+                Learn More About CSS →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Day 7-9: JavaScript Interactions -->
+        <section class="learning-section">
+          <div class="section-header">
+            <div class="section-icon">⚡</div>
+            <h2 class="section-title">Days 7-9: JavaScript & Interactions</h2>
+            <p class="section-description">Add dynamic behavior and user interactions</p>
+          </div>
+          <div class="content-grid">
+            <div class="content-card">
+              <div class="card-header">
+                <div class="card-icon js-icon">JS</div>
+                <div class="difficulty-badge advanced">Advanced</div>
+              </div>
+              <h3>Interactive Elements</h3>
+              <p>JavaScript brings your webpage to life with dynamic behavior and user interactions.</p>
+              <div class="js-demo">
+                <button id="alertBtn" class="demo-button primary">
+                  <span class="button-icon">🔔</span>
+                  Click for Alert!
+                </button>
+                <button id="changeColorBtn" class="demo-button secondary">
+                  <span class="button-icon">🎨</span>
+                  Change Theme
+                </button>
+                <button id="counterBtn" class="demo-button accent">
+                  <span class="button-icon">📊</span>
+                  Counter: <span id="counter">0</span>
+                </button>
+                <button id="feedbackBtn" class="demo-button success">
+                  <span class="button-icon">💬</span>
+                  Show Feedback
+                </button>
+              </div>
+            </div>
+            
+            <div class="content-card">
+              <div class="card-header">
+                <div class="card-icon interaction-icon">🔄</div>
+              </div>
+              <h3>JavaScript & UX Skills</h3>
+              <ul class="feature-list">
+                <li>Variables and data types</li>
+                <li>Functions and events</li>
+                <li>DOM manipulation</li>
+                <li>Event handlers and user feedback</li>
+                <li>Basic programming logic</li>
+                <li>Loading states and animations</li>
+                <li>Form validation and accessibility</li>
+              </ul>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="learn-link">
+                Learn More About JavaScript →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Progress Tracker -->
+        <section class="learning-section">
+          <div class="section-header">
+            <div class="section-icon">📈</div>
+            <h2 class="section-title">Your Learning Progress</h2>
+            <p class="section-description">Track your journey through web development mastery</p>
+          </div>
+          <div class="progress-container">
+            <div class="progress-item">
+              <div class="progress-header">
+                <h4>HTML Mastery</h4>
+                <span class="progress-percentage">100%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%"></div>
+              </div>
+              <div class="progress-status completed">✓ Completed</div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-header">
+                <h4>CSS & UI/UX Skills</h4>
+                <span class="progress-percentage">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+              <div class="progress-status in-progress">🔄 In Progress</div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-header">
+                <h4>JavaScript & Interactions</h4>
+                <span class="progress-percentage">70%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 70%"></div>
+              </div>
+              <div class="progress-status in-progress">🔄 In Progress</div>
+            </div>
+          </div>
+          <button id="progressBtn" class="cta-button">Update Progress</button>
+        </section>
+
+        <!-- UI/UX Showcase Section -->
+        <section class="learning-section">
+          <div class="section-header">
+            <div class="section-icon">✨</div>
+            <h2 class="section-title">UI/UX Design Showcase</h2>
+            <p class="section-description">Experience modern design patterns and interactions</p>
+          </div>
+          
+          <div class="showcase-grid">
+            <div class="showcase-card" data-tilt>
+              <div class="showcase-header">
+                <div class="showcase-icon">🎨</div>
+                <h3>Visual Hierarchy</h3>
+              </div>
+              <p>Notice how typography, spacing, and colors guide your attention through the content naturally.</p>
+              <div class="showcase-demo">
+                <div class="hierarchy-demo">
+                  <h4 class="demo-title">Primary Heading</h4>
+                  <h5 class="demo-subtitle">Secondary Text</h5>
+                  <p class="demo-body">Supporting content with proper contrast</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="showcase-card" data-tilt>
+              <div class="showcase-header">
+                <div class="showcase-icon">📱</div>
+                <h3>Responsive Design</h3>
+              </div>
+              <p>The layout adapts seamlessly across different screen sizes and devices.</p>
+              <div class="showcase-demo">
+                <div class="device-demo">
+                  <div class="device desktop">💻</div>
+                  <div class="device tablet">📱</div>
+                  <div class="device mobile">📱</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="showcase-card" data-tilt>
+              <div class="showcase-header">
+                <div class="showcase-icon">⚡</div>
+                <h3>Micro-interactions</h3>
+              </div>
+              <p>Subtle animations and hover effects provide immediate feedback and enhance user experience.</p>
+              <div class="showcase-demo">
+                <button class="micro-demo-btn" id="microBtn">
+                  <span class="btn-text">Hover Me!</span>
+                  <span class="btn-ripple"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+      <div class="toast-content">
+        <span class="toast-icon">✨</span>
+        <span class="toast-message">Great job! You're learning UI/UX principles!</span>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Learning Resources</h4>
+            <div class="footer-links">
+              <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a>
+              <a href="https://www.figma.com" target="_blank">Figma Design</a>
+              <a href="https://dribbble.com" target="_blank">Design Inspiration</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Development Tools</h4>
+            <div class="footer-links">
+              <a href="https://github.com" target="_blank">GitHub</a>
+              <a href="https://codepen.io" target="_blank">CodePen</a>
+              <a href="https://stackoverflow.com" target="_blank">Stack Overflow</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Web Development Learning Journey. Built with HTML, CSS, JavaScript & UI/UX Design.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
