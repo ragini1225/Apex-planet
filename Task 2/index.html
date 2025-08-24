@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Skills Portfolio</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <h1>WebSkills</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#todo">To-Do</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Master Web Development Skills</h1>
+                <p>Learn HTML, CSS, and JavaScript through hands-on projects</p>
+                <button class="cta-button" onclick="scrollToSection('contact')">Get Started</button>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <h2>Contact Form with Validation</h2>
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        <span class="error-message" id="fullNameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Support</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="collaboration">Collaboration</option>
+                        </select>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project or inquiry..."></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                
+                <div id="formSuccessMessage" class="success-message" style="display: none;">
+                    <h3>Thank you for your message!</h3>
+                    <p>We'll get back to you within 24 hours.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- To-Do List Section -->
+        <section id="todo" class="todo-section">
+            <div class="section-container">
+                <h2>Dynamic To-Do List</h2>
+                <div class="todo-app">
+                    <div class="todo-input-container">
+                        <input type="text" id="todoInput" placeholder="Add a new task..." maxlength="100">
+                        <button id="addTodoBtn" class="add-btn">Add Task</button>
+                    </div>
+                    
+                    <div class="todo-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="pending">Pending</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                    
+                    <div class="todo-stats">
+                        <span id="totalTasks">0</span> total tasks, 
+                        <span id="completedTasks">0</span> completed
+                    </div>
+                    
+                    <ul id="todoList" class="todo-list"></ul>
+                    
+                    <div class="todo-actions">
+                        <button id="clearCompleted" class="secondary-btn">Clear Completed</button>
+                        <button id="clearAll" class="danger-btn">Clear All</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="section-container">
+                <h2>Dynamic Image Gallery</h2>
+                <div class="gallery-app">
+                    <div class="gallery-controls">
+                        <input type="url" id="imageUrlInput" placeholder="Enter image URL...">
+                        <input type="text" id="imageCaptionInput" placeholder="Image caption...">
+                        <button id="addImageBtn" class="add-btn">Add Image</button>
+                    </div>
+                    
+                    <div class="gallery-grid" id="galleryGrid">
+                        <!-- Sample images -->
+                        <div class="gallery-item" data-id="1">
+                            <img src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Coding workspace" loading="lazy">
+                            <div class="gallery-overlay">
+                                <p>Coding Workspace</p>
+                                <button class="remove-btn" onclick="removeImage(1)">×</button>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-id="2">
+                            <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Web development" loading="lazy">
+                            <div class="gallery-overlay">
+                                <p>Web Development</p>
+                                <button class="remove-btn" onclick="removeImage(2)">×</button>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-id="3">
+                            <img src="https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg?auto=compress&cs=tinysrgb&w=400" alt="JavaScript code" loading="lazy">
+                            <div class="gallery-overlay">
+                                <p>JavaScript Code</p>
+                                <button class="remove-btn" onclick="removeImage(3)">×</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Web Skills Portfolio. Built with HTML, CSS, and JavaScript.</p>
+            <div class="footer-links">
+                <a href="https://developer.mozilla.org" target="_blank">MDN Docs</a>
+                <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+                <a href="https://javascript.info" target="_blank">JavaScript Info</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/scripts/main.js"></script>
+    <script src="src/scripts/form-validation.js"></script>
+    <script src="src/scripts/todo.js"></script>
+    <script src="src/scripts/gallery.js"></script>
+</body>
+</html>
