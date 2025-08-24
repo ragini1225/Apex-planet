@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Digital Nexus</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Digital<span>Nexus</span></a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">Ready to start your next digital project? Let's talk!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2>Let's Create Something Amazing Together</h2>
+                    <p>Whether you need a stunning website, mobile app, or complete digital transformation, we're here to help bring your vision to life.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Visit Us</h4>
+                                <p>123 Digital Street<br>Tech City, TC 12345</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567<br>Mon-Fri 9AM-6PM</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-details">
+                                <h4>Email Us</h4>
+                                <p>hello@digitalnexus.com<br>support@digitalnexus.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘 Facebook</a>
+                            <a href="#" class="social-link">🐦 Twitter</a>
+                            <a href="#" class="social-link">💼 LinkedIn</a>
+                            <a href="#" class="social-link">📸 Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-header">
+                            <h3>Send Us a Message</h3>
+                            <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <input type="text" id="firstName" name="firstName" required>
+                                    <label for="firstName">First Name</label>
+                                    <span class="form-error" id="firstName-error"></span>
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" id="lastName" name="lastName" required>
+                                    <label for="lastName">Last Name</label>
+                                    <span class="form-error" id="lastName-error"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-field">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Email Address</label>
+                                <span class="form-error" id="email-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-field">
+                                <input type="tel" id="phone" name="phone">
+                                <label for="phone">Phone Number</label>
+                                <span class="form-error" id="phone-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-field">
+                                <select id="service" name="service" required>
+                                    <option value="">Select Service</option>
+                                    <option value="web-design">Web Design</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-app">Mobile App Development</option>
+                                    <option value="digital-marketing">Digital Marketing</option>
+                                    <option value="branding">Branding & Identity</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <label for="service">Service Needed</label>
+                                <span class="form-error" id="service-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-field">
+                                <select id="budget" name="budget">
+                                    <option value="">Select Budget Range</option>
+                                    <option value="5k-10k">$5,000 - $10,000</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k">$25,000 - $50,000</option>
+                                    <option value="50k+">$50,000+</option>
+                                </select>
+                                <label for="budget">Project Budget</label>
+                                <span class="form-error" id="budget-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-field">
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <label for="message">Project Details</label>
+                                <span class="form-error" id="message-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="checkbox-field">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Subscribe to our newsletter for updates and tips</label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loader"></span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="form-success" id="form-success">
+                        <div class="success-animation">✓</div>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                        <button class="btn btn-secondary" onclick="resetForm()">Send Another Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Find Our Office</h2>
+                <p class="section-subtitle">Located in the heart of Tech City's innovation district</p>
+            </div>
+            <div class="map-container" data-aos="zoom-in">
+                <div class="map-placeholder">
+                    <img src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Office Location Map" loading="lazy">
+                    <div class="map-overlay">
+                        <div class="map-marker">
+                            <div class="marker-pin">📍</div>
+                            <div class="marker-info">
+                                <h4>Digital Nexus HQ</h4>
+                                <p>123 Digital Street, Tech City</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h4>How long does a typical project take?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary based on complexity and scope. A simple website typically takes 2-4 weeks, while complex web applications can take 3-6 months. We'll provide a detailed timeline during our initial consultation.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-delay="100">
+                    <div class="faq-question">
+                        <h4>What's included in your web design service?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our web design service includes responsive design, user experience optimization, mobile-first approach, cross-browser compatibility, SEO-friendly structure, and 3 months of free support after launch.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-delay="200">
+                    <div class="faq-question">
+                        <h4>Do you provide ongoing support and maintenance?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer comprehensive support and maintenance packages including regular updates, security monitoring, performance optimization, and technical support. We're here to ensure your digital presence stays current and secure.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-delay="300">
+                    <div class="faq-question">
+                        <h4>Can you help with digital marketing and SEO?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We offer comprehensive digital marketing services including SEO optimization, social media marketing, content strategy, PPC campaigns, and analytics tracking to help grow your online presence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Digital<span>Nexus</span></h3>
+                    <p>Creating digital excellence through innovative design and development solutions.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📧</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Web Design</a></li>
+                        <li><a href="index.html#services">Web Development</a></li>
+                        <li><a href="index.html#services">Mobile Apps</a></li>
+                        <li><a href="index.html#services">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>📍 123 Digital Street, Tech City</p>
+                        <p>📞 +1 (555) 123-4567</p>
+                        <p>✉️ hello@digitalnexus.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Digital Nexus. All rights reserved. | Built with ❤️ and cutting-edge technology</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">↑</button>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
