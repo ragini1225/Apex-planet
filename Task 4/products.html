@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase - Interactive Product Listing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="products-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Ragini Jain</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="todo.html" class="nav-link">To-Do App</a></li>
+                <li><a href="products.html" class="nav-link active">Products</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products App -->
+    <div class="products-app">
+        <div class="products-container">
+            <header class="products-header">
+                <h1><i class="fas fa-store"></i> Product Showcase</h1>
+                <p>Discover amazing products with advanced filtering and sorting capabilities</p>
+            </header>
+
+            <!-- Filters and Search -->
+            <div class="products-controls">
+                <div class="search-section">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="productSearch" placeholder="Search products...">
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category</label>
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="home">Home & Garden</option>
+                            <option value="sports">Sports</option>
+                            <option value="books">Books</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="priceRange">Price Range</label>
+                        <select id="priceRange">
+                            <option value="all">All Prices</option>
+                            <option value="0-50">$0 - $50</option>
+                            <option value="51-100">$51 - $100</option>
+                            <option value="101-200">$101 - $200</option>
+                            <option value="201-500">$201 - $500</option>
+                            <option value="501+">$501+</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="ratingFilter">Rating</label>
+                        <select id="ratingFilter">
+                            <option value="all">All Ratings</option>
+                            <option value="4+">4+ Stars</option>
+                            <option value="3+">3+ Stars</option>
+                            <option value="2+">2+ Stars</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sortBy">Sort By</label>
+                        <select id="sortBy">
+                            <option value="name">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                            <option value="price">Price (Low to High)</option>
+                            <option value="price-desc">Price (High to Low)</option>
+                            <option value="rating">Rating (Low to High)</option>
+                            <option value="rating-desc">Rating (High to Low)</option>
+                        </select>
+                    </div>
+
+                    <button class="reset-filters-btn" id="resetFilters">
+                        <i class="fas fa-undo"></i>
+                        Reset Filters
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Stats -->
+            <div class="products-stats">
+                <div class="results-info">
+                    <span id="resultsCount">0</span> products found
+                </div>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid" title="Grid View">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list" title="List View">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-content">
+                <div id="productsGrid" class="products-grid">
+                    <!-- Products will be dynamically added here -->
+                </div>
+
+                <div class="loading-state" id="loadingState" style="display: none;">
+                    <div class="loading-spinner"></div>
+                    <p>Loading products...</p>
+                </div>
+
+                <div class="no-results" id="noResults" style="display: none;">
+                    <div class="no-results-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>No products found</h3>
+                    <p>Try adjusting your filters or search terms.</p>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <button class="pagination-btn" id="prevPage" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                    Previous
+                </button>
+                <div class="pagination-info" id="paginationInfo">
+                    Page 1 of 1
+                </div>
+                <button class="pagination-btn" id="nextPage">
+                    Next
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content product-modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Product Details</h3>
+                <button class="modal-close" id="closeProductModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+</body>
+</html>
