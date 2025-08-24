@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">InteractiveWeb</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#carousel" class="nav-link">Gallery</a></li>
+                <li><a href="#quiz" class="nav-link">Quiz</a></li>
+                <li><a href="#api" class="nav-link">Live Data</a></li>
+                <li><a href="#media" class="nav-link">Media</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Advanced Web Experience</h1>
+            <p class="hero-subtitle">Responsive Design • Interactive Elements • Real-time Data</p>
+            <button class="cta-button">Explore Features</button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Image Carousel Section -->
+    <section id="carousel" class="carousel-section">
+        <div class="container">
+            <h2 class="section-title">Interactive Image Carousel</h2>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide active">
+                        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Technology">
+                        <div class="slide-content">
+                            <h3>Modern Technology</h3>
+                            <p>Cutting-edge innovations shaping our future</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.pexels.com/photos/1194713/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Design">
+                        <div class="slide-content">
+                            <h3>Creative Design</h3>
+                            <p>Beautiful aesthetics meet functional design</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Innovation">
+                        <div class="slide-content">
+                            <h3>Innovation</h3>
+                            <p>Pushing boundaries with creative solutions</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Future">
+                        <div class="slide-content">
+                            <h3>Future Vision</h3>
+                            <p>Envisioning tomorrow's possibilities today</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev-btn">&#8249;</button>
+                <button class="carousel-btn next-btn">&#8250;</button>
+                <div class="carousel-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">Interactive Knowledge Quiz</h2>
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <div class="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <div class="quiz-info">
+                        <span id="question-counter">1 / 5</span>
+                        <span id="score">Score: 0</span>
+                    </div>
+                </div>
+                <div class="quiz-content">
+                    <h3 id="question" class="quiz-question">Loading question...</h3>
+                    <div class="quiz-options" id="quiz-options">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="quiz-controls">
+                    <button id="next-btn" class="quiz-btn" disabled>Next Question</button>
+                    <button id="restart-btn" class="quiz-btn secondary" style="display: none;">Restart Quiz</button>
+                </div>
+                <div class="quiz-results" id="quiz-results" style="display: none;">
+                    <h3>Quiz Completed!</h3>
+                    <p id="final-score"></p>
+                    <div class="score-badge" id="score-badge"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Data Section -->
+    <section id="api" class="api-section">
+        <div class="container">
+            <h2 class="section-title">Live Data from APIs</h2>
+            <div class="api-grid">
+                <div class="api-card weather-card">
+                    <div class="card-header">
+                        <h3>Current Weather</h3>
+                        <button id="refresh-weather" class="refresh-btn">🔄</button>
+                    </div>
+                    <div class="weather-content" id="weather-content">
+                        <div class="loading">Loading weather data...</div>
+                    </div>
+                </div>
+                <div class="api-card joke-card">
+                    <div class="card-header">
+                        <h3>Random Joke</h3>
+                        <button id="new-joke" class="refresh-btn">🎲</button>
+                    </div>
+                    <div class="joke-content" id="joke-content">
+                        <div class="loading">Loading a joke...</div>
+                    </div>
+                </div>
+                <div class="api-card quote-card">
+                    <div class="card-header">
+                        <h3>Inspirational Quote</h3>
+                        <button id="new-quote" class="refresh-btn">✨</button>
+                    </div>
+                    <div class="quote-content" id="quote-content">
+                        <div class="loading">Loading quote...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Gallery Section -->
+    <section id="media" class="media-section">
+        <div class="container">
+            <h2 class="section-title">Media Gallery</h2>
+            <div class="media-tabs">
+                <button class="tab-btn active" data-tab="photos">Photos</button>
+                <button class="tab-btn" data-tab="videos">Videos</button>
+            </div>
+            <div class="media-content">
+                <div class="tab-content active" id="photos">
+                    <div class="photo-grid">
+                        <div class="photo-item">
+                            <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Tech 1">
+                            <div class="photo-overlay">
+                                <h4>Modern Workspace</h4>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <img src="https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Tech 2">
+                            <div class="photo-overlay">
+                                <h4>Digital Innovation</h4>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Tech 3">
+                            <div class="photo-overlay">
+                                <h4>Creative Process</h4>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Tech 4">
+                            <div class="photo-overlay">
+                                <h4>Team Collaboration</h4>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Tech 5">
+                            <div class="photo-overlay">
+                                <h4>Future Technology</h4>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Tech 6">
+                            <div class="photo-overlay">
+                                <h4>Digital Solutions</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="videos">
+                    <div class="video-grid">
+                        <div class="video-item">
+                            <video controls poster="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1">
+                                <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <h4>Innovation in Action</h4>
+                            </div>
+                        </div>
+                        <div class="video-item">
+                            <video controls poster="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1">
+                                <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <h4>Creative Process</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Interactive Web Experience. Built with HTML, CSS & JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
